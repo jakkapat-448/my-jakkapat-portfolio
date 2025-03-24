@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/my-jakkapat-portfolio/static/css/main.f6337650.css",
+    "main.js": "/my-jakkapat-portfolio/static/js/main.4c001fc2.js",
+    "static/js/453.499426ab.chunk.js": "/my-jakkapat-portfolio/static/js/453.499426ab.chunk.js",
+    "index.html": "/my-jakkapat-portfolio/index.html",
+    "main.f6337650.css.map": "/my-jakkapat-portfolio/static/css/main.f6337650.css.map",
+    "main.4c001fc2.js.map": "/my-jakkapat-portfolio/static/js/main.4c001fc2.js.map",
+    "453.499426ab.chunk.js.map": "/my-jakkapat-portfolio/static/js/453.499426ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6337650.css",
+    "static/js/main.4c001fc2.js"
+  ]
+}
