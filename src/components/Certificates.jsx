@@ -9,7 +9,7 @@ const Certificates = () => {
       issuer: "The Odin Project",
       date: "2024",
       url: "https://www.theodinproject.com/paths/foundations/courses/foundations",
-      image: "/res/theodin_foundations_course.png"
+      image: `${process.env.PUBLIC_URL}/res/theodin_foundations_course.png`
     },
   ];
 

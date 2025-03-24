@@ -27,8 +27,8 @@ const About = () => {
     <div className="about-container">
       <h2>About Me</h2>
       <div className="profile-section">
-        <img src="/res/my_PFP.jpg" alt="my pfp" className="profile-pic" />
-        <div className="profile-text">
+      <img src={`${process.env.PUBLIC_URL}/res/my_PFP.jpg`} alt="my pfp" className="profile-pic" />
+      <div className="profile-text">
           <h3>สวัสดีครับ</h3>
           <h3 className="myName">บอส จักรพรรดิ หงษ์ชากรณ์</h3>
           <p>

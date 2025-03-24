@@ -12,7 +12,7 @@ const Projects = () => {
       image: "/res/exarotonBot-example.gif",
       category: "personal",
       technologies: ["Python", "Exaroton API",],
-      github: "https://github.com/jakkapat-448/exaroton-discord-bot",
+      image: `${process.env.PUBLIC_URL}/res/exarotonBot-example.gif`,
       demo: null
     },
   ];
