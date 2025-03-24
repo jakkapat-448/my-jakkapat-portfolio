@@ -47,7 +47,7 @@ const Contact = () => {
       type: "Discord",
       value: "0b1000_",
       icon: (
-        <img src={`${process.env.PUBLIC_URL}\res\discord-white-icon.svg`} alt="" width="26" height="26"/>
+        <img src={`${process.env.PUBLIC_URL}/res/discord-white-icon.svg`} alt="" width="26" height="26" />
       ),
       link: "https://discord.gg/cpx9J7EzxM"
     },
