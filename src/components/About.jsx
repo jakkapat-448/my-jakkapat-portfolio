@@ -1,27 +1,79 @@
 // components/About.jsx
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const programmingLanguages = [
-  { name: "HTML/CSS", level: 70, years: 3 },
-  { name: "JavaScript", level: 45, years: 2 },
-  { name: "C#", level: 30, years: 1 },
-  { name: "Python", level: 60, years: 2 },
+  { 
+    name: "HTML/CSS", 
+    level: "Intermediate", 
+    years: 3,
+    description: "สร้างเว็บไซต์ที่สวยงาม responsive และใช้ CSS Flexbox/Grid อย่างมีประสิทธิภาพ"
+  },
+  { 
+    name: "JavaScript", 
+    level: "Basic", 
+    years: 2,
+    description: "พัฒนา interactive web elements, DOM manipulation และใช้ API ต่างๆได้"
+  },
+  { 
+    name: "C#", 
+    level: "Basic", 
+    years: 1,
+    description: "เขียนโค้ดเกมสั้นๆใน Unity, เข้าใจ OOP concepts และ syntax พื้นฐาน"
+  },
+  { 
+    name: "Python", 
+    level: "Intermediate", 
+    years: 2,
+    description: "สร้าง Discord Bots, ประมวลผลข้อมูลเบื้องต้น และเขียน automation scripts"
+  },
 ];
 
 const toolsAndTechnologies = [
-  { name: "React", level: 40, years: 1 },
-  { name: "Node.js", level: 20, years: 1 },
-  { name: "Unity", level: 60, years: 2 },
-  { name: "Firebase", level: 20, years: 1 },
-  { name: "Git", level: 65, years: 2 },
+  { 
+    name: "React", 
+    level: "Basic", 
+    years: 1,
+    description: "สร้าง UI components, ใช้ hooks พื้นฐาน (useState, useEffect) และทำ single page applications"
+  },
+  { 
+    name: "Node.js", 
+    level: "Beginner", 
+    years: 1,
+    description: "สร้าง API endpoints เบื้องต้น และเชื่อมต่อกับฐานข้อมูล"
+  },
+  { 
+    name: "Unity", 
+    level: "Intermediate", 
+    years: 2,
+    description: "พัฒนาเกม 2D, จัดการ physics และ animations เบื้องต้น"
+  },
+  { 
+    name: "Firebase", 
+    level: "Beginner", 
+    years: 1,
+    description: "ใช้ Firestore, Authentication และ Hosting สำหรับโปรเจคขนาดเล็ก"
+  },
+  { 
+    name: "Git", 
+    level: "Intermediate", 
+    years: 2,
+    description: "ใช้ version control พื้นฐาน, branching, pull requests"
+  },
 ];
 
-const About = () => {
-  const [animate, setAnimate] = useState(false);
+// แปลงระดับเป็นภาษาไทย
+const getLevelInThai = (level) => {
+  switch(level) {
+    case "Beginner": return "เริ่มต้น";
+    case "Basic": return "พื้นฐาน";
+    case "Intermediate": return "ปานกลาง";
+    case "Advanced": return "ขั้นสูง";
+    case "Expert": return "เชี่ยวชาญ";
+    default: return level;
+  }
+};
 
-  useEffect(() => {
-    setTimeout(() => setAnimate(true), 500);
-  }, []);
+const About = () => {
 
   return (
     <div className="about-container">
@@ -60,15 +112,13 @@ const About = () => {
           <div key={skill.name} className="skill-item">
             <div className="skill-info">
               <span className="skill-name">{skill.name}</span>
-              <span className="skill-years">{skill.years} years</span>
+              <span className="skill-level">{getLevelInThai(skill.level)}</span>
             </div>
-            <div className="skill-bar-container">
-              <div
-                className="skill-bar"
-                style={{
-                  width: animate ? `${skill.level}%` : "0%",
-                }}
-              ></div>
+            <div className="skill-years">
+              <span>{skill.years} ปี</span>
+            </div>
+            <div className="skill-tooltip">
+              <p>{skill.description}</p>
             </div>
           </div>
         ))}
@@ -80,15 +130,13 @@ const About = () => {
           <div key={skill.name} className="skill-item">
             <div className="skill-info">
               <span className="skill-name">{skill.name}</span>
-              <span className="skill-years">{skill.years} years</span>
+              <span className="skill-level">{getLevelInThai(skill.level)}</span>
             </div>
-            <div className="skill-bar-container">
-              <div
-                className="skill-bar"
-                style={{
-                  width: animate ? `${skill.level}%` : "0%",
-                }}
-              ></div>
+            <div className="skill-years">
+              <span>{skill.years} ปี</span>
+            </div>
+            <div className="skill-tooltip">
+              <p>{skill.description}</p>
             </div>
           </div>
         ))}
